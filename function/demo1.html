@@ -5,15 +5,50 @@
   </head>
   <body>
     <script>
-      function numbering() {
+      // function numbering() {
+      //   var i = 0;
+      //   while(i < 20) {
+      //     document.write(i);
+      //     i++;
+      //   }
+      // }
+      // numbering();
+
+      // function get_member1() {
+      //   return 'egoing';
+      // }
+      //
+      // function get_member2() {
+      //   return 'k8805'
+      // }
+      //
+      // alert(get_member1());
+      // alert(get_member2());
+
+      // function get_arguments(arg1, arg2) {
+      //   return arg1 + arg2;
+      // }
+      //
+      // alert(get_arguments(10, 20));
+      // alert(get_arguments(20, 30));
+
+      (function () {
         var i = 0;
-        while(i < 20) {
-          document.write(i);
+        while(i < 5) {
+          document.write(i+"<br>");
+          i++;
+        }
+      })();
+
+      numbering = function () {
+        var i = 0;
+        while(i < 10) {
+          document.write(i+"<br>");
           i++;
         }
       }
-      numbering();
 
+      numbering();
     </script>
   </body>
 </html>
