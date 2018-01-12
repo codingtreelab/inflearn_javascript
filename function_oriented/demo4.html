@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>함수지향-arguments</title>
+  </head>
+  <body>
+    <script>
+      // function sum() {
+      //   var _sum = 0;
+      //   for(var i = 0; i < arguments.length; i++) {
+      //     document.write(i+' : '+arguments[i]+'<br>');
+      //     _sum += arguments[i];
+      //   }
+      //   return _sum;
+      // }
+      // document.write('result : ' + sum(1, 2, 3, 4));
+      function zero() {
+        console.log (
+          'zero.length', zero.length, 'arguments', arguments.length
+        );
+      }
+      zero();
+
+      function one(arg1) {
+        console.log (
+          'one.length', one.length, 'arguments', arguments.length
+        );
+      }
+
+      one('val1', 'val2');
+    </script>
+  </body>
+</html>
