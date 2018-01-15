@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>객제지향-Object</title>
+  </head>
+  <body>
+    <script>
+      // var arr = ["a", "b", "c"];
+      // console.log('object.keys(arr)', Object.keys(arr));
+      //
+      // var o = new Object();
+      // console.log('o.toString()', o.toString());
+      //
+      // var a = new Array(1, 2, 3);
+      // console.log('a.toString()', a.toString());
+      Object.prototype.contain = function(needle) {
+        for(var name in this) {
+          if(this[name] === needle) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      var o = {'name':'egoing', 'city':'seoul'};
+      console.log(o.contain('grapittie'));
+      var a = ['egoing', 'leezche', 'grapittie'];
+      console.log(a.contain('grapittie'));
+
+      for(var name in o) {
+        if(a.hasOwnProperty(name)){
+          console.log(name);
+        }
+
+      }
+    </script>
+  </body>
+</html>
