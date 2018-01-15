@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>객체지향-상속</title>
+  </head>
+  <body>
+    <script>
+      // function Person(name) {
+      //   this.name = name;
+      //   this.introduce = function() {
+      //     return 'My name is ' + this.name;
+      //   }
+      // }
+      //
+      // var p1 = new Person('egoing');
+      // document.write(p1.introduce());
+
+      // function Person(name) {
+      //   this.name = name;
+      // }
+      // Person.prototype.name = null;
+      // Person.prototype.introduce = function() {
+      //   return 'My nickname is ' + this.name;
+      // }
+      //
+      // function Programmer(name) {
+      //   this.name = name;
+      // }
+      // Programmer.prototype = new Person();
+      // Programmer.prototype.coding = function() {
+      //   return 'hello world';
+      // }
+      //
+      // function Designer(name) {
+      //   this.name = name;
+      // }
+      // Designer.prototype = new Person();
+      // Designer.prototype.design = function() {
+      //   return 'Beautiful';
+      // }
+      //
+      //
+      // var p1 = new Programmer('egoing');
+      // document.write(p1.introduce()+"<br>");
+      // document.write(p1.coding()+"<br>");
+      //
+      // var p2 = new Designer('egoing');
+      // document.write(p2.introduce()+"<br>");
+      // document.write(p2.design()+"<br>");
+
+      function Ultra() {}
+      Ultra.prototype.ultraProp = true;
+
+      function Super() {}
+      Super.prototype = new Ultra();
+
+      function Sub() {}
+      Sub.prototype = new Super();
+      Sub.prototype.ultraProp = 2;
+
+      var o = new Sub();
+      console.log(o.ultraProp);
+    </script>
+  </body>
+</html>
