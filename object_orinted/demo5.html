@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>객체지향-표준내장객체의 확장</title>
+  </head>
+  <body>
+    <script>
+      // var arr = new Array('seoul', 'new york', 'ladrkh', 'pusan', 'Tsukuba');
+      // function getRandomValueFromArray(arr) {
+      //   var index = Math.floor(arr.length * Math.random());
+      //   return arr[index];
+      // }
+      // console.log(getRandomValueFromArray(arr));
+
+      Array.prototype.random = function() {
+        var index = Math.floor(this.length * Math.random());
+        return this[index];
+      }
+      var arr = new Array('seoul', 'new york', 'ladrkh', 'pusan', 'Tsukuba');
+
+      console.log(arr.random());
+    </script>
+  </body>
+</html>
